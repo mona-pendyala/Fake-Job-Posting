@@ -1,0 +1,248 @@
+/* ===============================
+GLOBAL SETTINGS
+=============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f2723,#306c81,#57a872);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    color:white;
+}
+
+/* ===============================
+NAVBAR
+=============================== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    margin-left:20px;
+    font-size:16px;
+    transition:0.3s;
+}
+.nav-links a:hover{
+    color:#00e5ff;
+}
+
+/* ===============================
+MAIN CONTAINER
+=============================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* ===============================
+CARDS
+=============================== */
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:12px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+FORM STYLING
+=============================== */
+
+.form-box{
+    width:350px;
+    margin:auto;
+    background:rgba(255,255,255,0.1);
+    padding:35px;
+    border-radius:12px;
+    backdrop-filter:blur(15px);
+}
+
+.form-box h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input-box{
+    width:200%;
+    margin-bottom:15px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    outline:none;
+}
+
+.input-box input:focus{
+    border:2px solid #00e5ff;
+}
+
+/* ===============================
+BUTTONS
+=============================== */
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#00e5ff;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00bcd4;
+}
+
+/* ===============================
+HOME PAGE SECTION
+=============================== */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* ===============================
+FEATURE GRID
+=============================== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.feature{
+    background:rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+}
+
+/* ===============================
+REPORT PAGE
+=============================== */
+
+textarea{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    resize:none;
+    height:120px;
+}
+
+/* ===============================
+FOOTER
+=============================== */
+
+footer{
+    margin-top:auto;
+    text-align:center;
+    padding:15px;
+    background:brown;
+}
+
+/* ===============================
+LOGIN QUOTE
+=============================== */
+
+.quote{
+    text-align:center;
+    margin-top:15px;
+    font-style:italic;
+    opacity:0.8;
+}
+
+/* ===============================
+RESPONSIVE
+=============================== */
+
+@media(max-width:768px){
+.navbar{
+flex-direction:column;
+}
+.nav-links{
+margin-top:10px;
+}
+.hero h1{
+font-size:30px;
+}
+}
+/* =========================
+SCREENSHOT UPLOAD SECTION
+========================= */
+/* Upload Screenshot Section */
+
+nav {
+    display: flex;
+    justify-content: center;   /* centers navbar */
+    align-items: center;
+    gap: 25px;                 /* space between links */
+    padding: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #45a049;
+}

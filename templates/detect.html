@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analyze Job</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<section class="container">
+
+    <h2>Analyze Job Posting</h2>
+
+    <form action="/predict" method="post">
+
+        <input type="text" name="company_name" placeholder="Company Name" required>
+
+        <br><br>
+
+        <textarea name="job_description" placeholder="Enter job description" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Check Job</button>
+
+    </form>
+
+    <!-- RESULT SHOWS HERE -->
+    {% if prediction %}
+        <div style="margin-top:20px;">
+            <h3>Prediction Result</h3>
+            <p>{{ prediction }}</p>
+        </div>
+    {% endif %}
+
+</section>
+
+</body>
+</html>

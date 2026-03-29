@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       background: linear-gradient(135deg,#0f2723,#306c81,#57a872);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 30px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-box img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 106%;
+      padding: 10px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4338ca;
+    }
+    .login_container {
+      color:white;
+      text-align:center;
+    }
+    .signup {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login_container">
+    <h1>Welcome Back!</h1>
+    <p> Log in to detect feak job postings.</p>
+  <div class="login-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Icon">
+    <h2> Login</h2>
+    <form onsubmit="event.preventDefault();login();">
+      <input type="email" placeholder="Enter Email" required>
+      <input type="password" placeholder="Enter Password" required>
+      <button type="button" onclick="login()">Login</button>
+    </form>
+    <p class="signup-link"> Do you not have an account? <a href="signup.html">Signup</a></p>
+    </div>
+  </div>
+  <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>

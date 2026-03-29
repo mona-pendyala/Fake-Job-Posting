@@ -1,0 +1,3 @@
+flask
+sickit-learn
+numpy

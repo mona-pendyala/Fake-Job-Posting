@@ -59,12 +59,12 @@
   <div class="login-box">
     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Icon">
     <h2> Login</h2>
-    <form onsubmit="event.preventDefault();login();">
-      <input type="email" placeholder="Enter Email" required>
-      <input type="password" placeholder="Enter Password" required>
-      <button type="button" onclick="login()">Login</button>
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Enter Email" required>
+      <input type="password" name="password" placeholder="Enter Password" required>
+      <button type="submit">Login</button>
     </form>
-    <p class="signup-link"> Do you not have an account? <a href="signup.html">Signup</a></p>
+    <p class="signup-link"> Do you not have an account? <a href="/signup">Signup</a></p>
     </div>
   </div>
   <script src="{{url_for('static',filename='script.js')}}"></script>

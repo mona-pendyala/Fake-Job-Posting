@@ -37,9 +37,20 @@ def index():
     return render_template('index.html')
 
 # Login page
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+
+        for user in users:
+            if user['email'] == email and user['password'] == password:
+                return redirect('/home')
+
+        return "Invalid credentials"
+
     return render_template('login.html')
+
 
 # Home after login
 @app.route('/home')

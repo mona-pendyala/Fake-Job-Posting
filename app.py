@@ -1,13 +1,32 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,redirect
 import pickle
 import os
-
+users=[]
 app = Flask(__name__)
 
 # Load model
 #model = pickle.load(open('fake_job_model.pkl', 'rb'))
 #vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
+#signup
+@app.route('/signup', methods=['POST'])
+def signup():
+    username = request.form['username']
+    email = request.form['email']
+    password = request.form['password']
+    confirm_password = request.form['confirm_password']
 
+    if password != confirm_password:
+        return "Passwords do not match"
+
+    users.append({
+        "username": username,
+        "email": email,
+        "password": password
+    })
+
+    return redirect('/login')
+
+    
 # Home / Index
 @app.route('/')
 def index():

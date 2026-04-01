@@ -66,16 +66,16 @@ font-size:14px;
 <h2>Create Your Account</h2>
 <p class="quote">"Your journey begins here. Join us today!"</p>
 
-<form>
-<input type="text" placeholder="Full Name" required>
+<form action="/signup" method="POST">
+<input type="text" name="username" placeholder="Full Name" required>
 
-<input type="email" placeholder="Email Address" required>
+<input type="email"  name="email" placeholder="Email Address" required>
 
-<input type="password" placeholder="Password" required>
+<input type="password"  name="password" placeholder="Password" required>
 
-<input type="password" placeholder="Confirm Password" required>
+<input type="password" name="confirm_password" placeholder="Confirm Password" required>
 
-<button onclick="window.location.href='/home'">Sign Up</button>
+<button type="submit">Sign Up</button>
 
 <p class="login-link">Already have an account? <a href="/login">Login</a></p>
 

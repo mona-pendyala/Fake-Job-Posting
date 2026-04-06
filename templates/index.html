@@ -68,6 +68,26 @@
         button:hover {
             background: #1e40af;
         }
+        .analyze-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #00c6ff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.analyze-btn:hover {
+    background-color: #0072ff;
+    transform: scale(1.05);
+}
+.hero-section{
+    text-align: center;
+    margin-top: 80px;
+}
     </style>
 </head>
 
@@ -76,15 +96,19 @@
 <div class="container">
 
     <!-- HERO -->
+     <div class="hero-section">
     <h1>AI Fake Job Detector</h1>
     <p>Protect yourself from fake job postings using Artificial Intelligence</p>
+    <img src="/static/job.png" class="hero-img">
+     </div>
+
 
     <!-- ABOUT / FEATURES -->
     <div class="features">
 
         <div class="card">
             <i class="fas fa-search"></i>
-            <h3>Analyze Jobs</h3>
+            <a href="/detect" class="analyze-btn">Analyze Job</a>
             <p>Paste job descriptions and analyze instantly</p>
         </div>
 

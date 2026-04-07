@@ -15,6 +15,8 @@
             background: linear-gradient(135deg,#0f2723,#306c81,#57a872);
             color: white;
             text-align: center;
+             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .container {
@@ -68,22 +70,10 @@
         button:hover {
             background: #1e40af;
         }
-        .analyze-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #00c6ff;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.analyze-btn:hover {
-    background-color: #0072ff;
-    transform: scale(1.05);
-}
+        .main-icon{
+            font-size: 80px;
+        }
+       
 .hero-section{
     text-align: center;
     margin-top: 80px;
@@ -99,7 +89,7 @@
      <div class="hero-section">
     <h1>AI Fake Job Detector</h1>
     <p>Protect yourself from fake job postings using Artificial Intelligence</p>
-    <img src="/static/job.png" class="hero-img">
+    <div class="main-icon"><i class="fas fa-file-signature"></i></div>
      </div>
 
 
@@ -108,20 +98,20 @@
 
         <div class="card">
             <i class="fas fa-search"></i>
-            <a href="/detect" class="analyze-btn">Analyze Job</a>
-            <p>Paste job descriptions and analyze instantly</p>
+            <h3>Analyze Job</h3>
+            <h4 style="color: #2246bbd8;">Paste job descriptions and analyze instantly</h4>
         </div>
 
         <div class="card">
             <i class="fas fa-exclamation-triangle"></i>
             <h3>Detect Fake Jobs</h3>
-            <p>Identify scams using AI technology</p>
+            <h4 style="color: #2246bbd8;">Identify scams using AI technology</h4>
         </div>
 
         <div class="card">
             <i class="fas fa-shield-alt"></i>
             <h3>Stay Safe</h3>
-            <p>Make smarter and safer job decisions</p>
+            <h4 style="color: #2246bbd8;">Make smarter and safer job decisions</h4>
         </div>
 
     </div>

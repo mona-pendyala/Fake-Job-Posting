@@ -3,15 +3,43 @@
 <head>
  <title>AI Fake Job Detector</title>
 <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
+<style>
+     .analyze-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #00c6ff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.analyze-btn:hover {
+    background-color: #0072ff;
+    transform: scale(1.05);
+}
+body{
+            
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#0f2723,#306c81,#57a872);
+            color: white;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+}
+</style>
 <body>
     <header>
-        <h1 align="center">AI Fake Job Posting Detector</h1>
+        <h1 align="center" style="font-style: bold;">AI Fake Job Posting Detector</h1>
         <nav>
     
     
-    <div><a href="/detect">Analyze Job</a></div>
+   
     
 
     <div id="logoutLink" style="display:none;"><a href="#" onclick="logout()">Logout</a></div>
@@ -22,7 +50,9 @@
         <p>
             Protect yourself from online job scams using Artificial Intelligence
         </p>
-        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" width="200"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRke7Ul5CVvowOwc2ZnnWsbbsCYNHs-JXB2XQ&s" height="80px" width="80px">
+            <div><a href="/detect" class="analyze-btn">Analyze Job</a></div>
+        </div> 
     </section>
 </body>
 </html>

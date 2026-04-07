@@ -5,9 +5,13 @@ users=[]
 app = Flask(__name__)
 
 # Load model
+try:
+    model = pickle.load(open('fake_job_model.pkl', 'rb'))
+    vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
+except:
+    model:None
+    vectorizer:None
 
-model = pickle.load(open('fake_job_model.pkl', 'rb'))
-vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
 #signup
 @app.route('/signup', methods=['GET','POST'])
 def signup():

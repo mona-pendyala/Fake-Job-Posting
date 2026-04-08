@@ -5,9 +5,9 @@ users=[]
 app = Flask(__name__)
 
 # Load model
-
-model = pickle.load(open('fake_job_model.pkl', 'rb'))
-vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model = pickle.load(open(os.path.join(BASE_DIR,'fake_job_model.pkl'), 'rb'))
+vectorizer = pickle.load(open(os.path.join(BASE_DIR'vectorizer.pkl'), 'rb'))
 
 
 #signup

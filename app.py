@@ -5,12 +5,10 @@ users=[]
 app = Flask(__name__)
 
 # Load model
-try:
-    model = pickle.load(open('fake_job_model.pkl', 'rb'))
-    vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
-except:
-    model:None
-    vectorizer:None
+
+model = pickle.load(open('fake_job_model.pkl', 'rb'))
+vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
+
 
 #signup
 @app.route('/signup', methods=['GET','POST'])
@@ -71,6 +69,11 @@ def detect():
 @app.route('/predict', methods=['POST'])
 def predict():
     job_desc = request.form['job_description'].lower()
+    if job_desc == ' ':
+        return render_template('detect.html',prediction="Please enter job description")
+    if model is None or vectorizer is None:
+        return render_template('detect.html',prediction="Model not loaded properly")    
+                          
 
     input_data = vectorizer.transform([job_desc])
     prediction = model.predict(input_data)[0]
